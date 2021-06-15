@@ -6,3 +6,9 @@ Projeto criado durante o treinamento full stack
 
 
 > Criação do projeto 
+
+
+
+## Dia 2
+
+> Criação das estruturas de pastas e employeeRole
