@@ -8,7 +8,12 @@
             RoleNames = roleNames;
         }
 
-        public string Id { get; set; }
-        public string RoleNames { get; set; }
+        public EmployeeRole(string roleNames)
+        {
+            RoleNames = roleNames;
+        }
+
+        public string Id { get; init; }
+        public string RoleNames { get; init; }
     }
 }
