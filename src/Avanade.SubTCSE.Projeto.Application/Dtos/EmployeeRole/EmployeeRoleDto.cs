@@ -2,8 +2,8 @@
 {
     public class EmployeeRoleDto
     {
-        public string Identificador { get; set; }
-        public string Cargo { get; set; }
+        public string Identificador { get; init; }
+        public string Cargo { get; init; }
 
 
 
@@ -11,7 +11,7 @@
         {
             return new EmployeeRoleDto
             {
-                Cargo = employeeRole.RoleNames,
+                Cargo = employeeRole.RoleName,
                 Identificador = employeeRole.Id
             };
         }
