@@ -1,11 +1,10 @@
-﻿namespace Avanade.SubTCSE.Projeto.Application.Dtos.EmployeeRole
+﻿using Avanade.SubTCSE.Projeto.Application.Dtos.Base;
+
+namespace Avanade.SubTCSE.Projeto.Application.Dtos.EmployeeRole
 {
-    public class EmployeeRoleDto
+    public class EmployeeRoleDto : BaseDto
     {
-        public string Identificador { get; init; }
         public string Cargo { get; init; }
-
-
 
         public static explicit operator EmployeeRoleDto(Avanade_SubTCSE_Projeto.Domain.Aggregates.EmployeeRole.Entities.EmployeeRole employeeRole)
         {
