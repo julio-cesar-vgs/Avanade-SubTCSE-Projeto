@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Avanade_SubTCSE_Projeto.Domain.Base.Repository;
 using System.Threading.Tasks;
 
 namespace Avanade_SubTCSE_Projeto.Domain.Aggregates.Employee.Interfaces.Repositories
 {
-    public interface IEmployeeRepository
+    public interface IEmployeeRepository: IBaseRepository<Entities.Employee, string>
     {
-
+        Task<Entities.Employee> AddEmployee(Entities.Employee employee);
     }
 }
