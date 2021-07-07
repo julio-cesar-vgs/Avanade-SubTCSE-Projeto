@@ -5,6 +5,7 @@ namespace Avanade_SubTCSE_Projeto.Data.Repositories.Base.MongoDB
 {
     public class MongoDBContext : IMongoDBContext
     {
+        private readonly IMongoDatabase _mongoDatabase;
         public MongoDBContext()
         {
             MongoClientSettings mongoClientSettings = MongoClientSettings.FromUrl(new MongoUrl(""));
@@ -15,11 +16,13 @@ namespace Avanade_SubTCSE_Projeto.Data.Repositories.Base.MongoDB
             };
 
             var mongoClient = new MongoClient(settings: mongoClientSettings);
+
+            _mongoDatabase = mongoClient.GetDatabase("");
         }
 
         public IMongoCollection<TEntity> GetCollection<TEntity>(string collection)
         {
-            throw new System.NotImplementedException();
+            return _mongoDatabase.GetCollection<TEntity>(collection);
         }
     }
 }

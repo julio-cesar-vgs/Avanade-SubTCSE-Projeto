@@ -5,6 +5,6 @@ namespace Avanade_SubTCSE_Projeto.Domain.Aggregates.Employee.Interfaces.Reposito
 {
     public interface IEmployeeRepository: IBaseRepository<Entities.Employee, string>
     {
-        Task<Entities.Employee> AddEmployee(Entities.Employee employee);
+
     }
 }
